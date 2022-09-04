@@ -1,0 +1,28 @@
+---
+import cuid from "cuid";
+
+import Layout from "../layouts/Layout.astro";
+import CopyToClipboardButton from "../components/CopyToClipboardButton.svelte";
+
+let id = cuid();
+---
+
+<Layout title="CUID Generator">
+  <main class="container">
+    <h1>Welcome to CUID Generator</h1>
+    <div>
+      <p>
+        Click on Copy button to copy the CUID to clipboard
+        <br />
+        Click on Change CUID button to refresh the page and get a new CUID
+      </p>
+    </div>
+    <h4>{id}</h4>
+    <div>
+      <CopyToClipboardButton client:load id={id} />
+      <a href="/">
+        <button class="contrast outline">Change CUID</button>
+      </a>
+    </div>
+  </main>
+</Layout>
