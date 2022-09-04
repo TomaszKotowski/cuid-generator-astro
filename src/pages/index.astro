@@ -17,7 +17,9 @@ let id = cuid();
         Click on Change CUID button to refresh the page and get a new CUID
       </p>
     </div>
-    <h4>{id}</h4>
+    <p>
+      <b>{id}</b>
+    </p>
     <div>
       <CopyToClipboardButton client:load id={id} />
       <button
