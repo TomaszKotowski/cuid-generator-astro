@@ -6,4 +6,4 @@
   };
 </script>
 
-<button on:click={handleCopyToClipboard} value={id}>Copy</button>
+<button type="button" on:click={handleCopyToClipboard} value={id}>Copy</button>
